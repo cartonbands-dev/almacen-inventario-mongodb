@@ -15,38 +15,12 @@ Un almacén central distribuye productos a 30 sucursales. La solución permite c
 
 ## Comandos para ejecutar
 
-```bash
-docker compose up --build
-GET http://localhost:3000/
-GET http://localhost:3000/stock/SKU-001/SUC-001
-GET http://localhost:3000/alertas/stock-bajo
-GET http://localhost:3000/movimientos/SKU-001
-POST http://localhost:3000/transferencias
-
-{
-  "sku": "SKU-001",
-  "origen": "SUC-001",
-  "destino": "SUC-002",
-  "cantidad": 5
-}
-
 docker compose exec app npm run seed
 
 ## Cargar datos semilla
 
-Después de levantar el proyecto, abrir otra terminal y ejecutar:
-
-```bash
 docker compose exec app npm run seed
 
-
----
-
-## 2. Falta explicar los endpoints en una tabla
-
-Ahora los tienes en bloque, pero sería mejor ponerlos así:
-
-```md
 ## Endpoints disponibles
 
 | Método | Endpoint | Descripción |
@@ -72,14 +46,6 @@ Colecciones:
 - inventarios
 - movimientos
 
-
----
-
-## 4. Falta explicar las colecciones
-
-Agrega una sección así:
-
-```md
 ## Colecciones principales
 
 - `productos`: almacena los productos con su SKU, descripción, categoría y unidad de medida.
@@ -89,11 +55,10 @@ Agrega una sección así:
 
 ## Transferencias atómicas
 
-El endpoint `/transferencias` utiliza transacciones multi-documento de MongoDB. Esto garantiza que al transferir productos entre ubicaciones se realicen tres operaciones como una sola unidad:
+El endpoint `/transferencias`:
 
 1. Descontar stock de la ubicación origen.
 2. Sumar stock en la ubicación destino.
 3. Registrar el movimiento histórico.
 
-Si alguna operación falla, la transferencia completa se cancela.
 
