@@ -45,6 +45,7 @@ Colecciones:
 - ubicaciones
 - inventarios
 - movimientos
+```
 
 ## Colecciones principales
 
@@ -55,10 +56,55 @@ Colecciones:
 
 ## Transferencias atómicas
 
-El endpoint `/transferencias`:
+El endpoint `/transferencias` utiliza transacciones multi-documento de MongoDB. Esto garantiza que al transferir productos entre ubicaciones se realicen tres operaciones como una sola unidad:
 
 1. Descontar stock de la ubicación origen.
 2. Sumar stock en la ubicación destino.
 3. Registrar el movimiento histórico.
+
+Si alguna operación falla, la transferencia completa se cancela.
+
+
+Debes poner esas **tres comillas invertidas** justo después de `- movimientos`.
+
+---
+
+## 2. Agrega el ejemplo JSON para transferencia
+
+Debajo de la tabla de endpoints agrega esto:
+
+````md
+## Ejemplo de transferencia
+
+```json
+{
+  "sku": "SKU-001",
+  "origen": "SUC-001",
+  "destino": "SUC-002",
+  "cantidad": 5
+}
+
+
+Eso ayuda mucho porque el endpoint `POST /transferencias` necesita un body.
+
+---
+
+## 3. Agrega una línea para clonar el repositorio
+
+Antes de “Comandos para ejecutar”, puedes agregar:
+
+````md
+## Instalación
+
+```bash
+git clone URL_DEL_REPOSITORIO
+cd almacen-inventario-mongodb
+```
+
+## Comandos para ejecutar
+
+```bash
+docker compose up --build
+```
 
 
