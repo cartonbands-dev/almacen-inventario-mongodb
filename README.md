@@ -16,14 +16,11 @@ Un almacén central distribuye productos a 30 sucursales. La solución permite c
 ## Instalación
 
 ```bash
+
 git clone URL_DEL_REPOSITORIO
+
 cd almacen-inventario-mongodb
 
-## 2. Agrega una nota de requisitos
-
-Puedes poner esto antes de instalación:
-
-```md
 ## Requisitos
 
 - Docker Desktop
