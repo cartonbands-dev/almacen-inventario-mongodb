@@ -17,3 +17,16 @@ Un almacén central distribuye productos a 30 sucursales. La solución permite c
 
 ```bash
 docker compose up --build
+GET http://localhost:3000/
+GET http://localhost:3000/stock/SKU-001/SUC-001
+GET http://localhost:3000/alertas/stock-bajo
+GET http://localhost:3000/movimientos/SKU-001
+POST http://localhost:3000/transferencias
+
+{
+  "sku": "SKU-001",
+  "origen": "SUC-001",
+  "destino": "SUC-002",
+  "cantidad": 5
+}
+
