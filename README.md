@@ -62,18 +62,6 @@ El endpoint `/transferencias` utiliza transacciones multi-documento de MongoDB. 
 2. Sumar stock en la ubicación destino.
 3. Registrar el movimiento histórico.
 
-Si alguna operación falla, la transferencia completa se cancela.
-
-
-Debes poner esas **tres comillas invertidas** justo después de `- movimientos`.
-
----
-
-## 2. Agrega el ejemplo JSON para transferencia
-
-Debajo de la tabla de endpoints agrega esto:
-
-````md
 ## Ejemplo de transferencia
 
 ```json
