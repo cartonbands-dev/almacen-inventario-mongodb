@@ -13,6 +13,31 @@ Un almacén central distribuye productos a 30 sucursales. La solución permite c
 - MongoDB
 - Docker Compose
 
+## Instalación
+
+```bash
+git clone URL_DEL_REPOSITORIO
+cd almacen-inventario-mongodb
+
+
+Donde dice `URL_DEL_REPOSITORIO`, luego puedes poner el enlace real de tu GitHub.
+
+---
+
+## 2. Agrega una nota de requisitos
+
+Puedes poner esto antes de instalación:
+
+```md
+## Requisitos
+
+- Docker Desktop
+- Git
+- Postman o navegador para probar los endpoints
+- MongoDB Compass opcional para visualizar la base de datos
+
+
+
 ## Comandos para ejecutar
 
 docker compose up --build
