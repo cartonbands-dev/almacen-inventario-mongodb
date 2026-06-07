@@ -15,7 +15,7 @@ Un almacén central distribuye productos a 30 sucursales. La solución permite c
 
 ## Comandos para ejecutar
 
-docker compose exec app npm run seed
+docker compose up --build
 
 ## Cargar datos semilla
 
