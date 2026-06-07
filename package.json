@@ -1,0 +1,15 @@
+{
+  "name": "almacen-inventario-mongodb",
+  "version": "1.0.0",
+  "description": "Mini-app de gestión de almacén con control de inventario usando MongoDB",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "seed": "node src/seed.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "mongodb": "^6.5.0"
+  }
+}
