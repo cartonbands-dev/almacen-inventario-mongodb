@@ -83,24 +83,3 @@ Debajo de la tabla de endpoints agrega esto:
   "destino": "SUC-002",
   "cantidad": 5
 }
-
-
-## 3. Agrega una línea para clonar el repositorio
-
-Antes de “Comandos para ejecutar”, puedes agregar:
-
-````md
-## Instalación
-
-```bash
-git clone URL_DEL_REPOSITORIO
-cd almacen-inventario-mongodb
-```
-
-## Comandos para ejecutar
-
-```bash
-docker compose up --build
-```
-
-
