@@ -16,10 +16,9 @@ Un almacén central distribuye productos a 30 sucursales. La solución permite c
 ## Instalación
 
 ```bash
-
-git clone URL_DEL_REPOSITORIO
-
+git clone https://github.com/cartonbands-dev/almacen-inventario-mongodb.git
 cd almacen-inventario-mongodb
+```
 
 ## Requisitos
 
