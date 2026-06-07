@@ -31,11 +31,15 @@ cd almacen-inventario-mongodb
 
 ## Comandos para ejecutar
 
+```bash
 docker compose up --build
+```
 
 ## Cargar datos semilla
 
+```bash
 docker compose exec app npm run seed
+```
 
 ## Endpoints disponibles
 
