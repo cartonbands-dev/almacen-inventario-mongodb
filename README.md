@@ -19,11 +19,6 @@ Un almacén central distribuye productos a 30 sucursales. La solución permite c
 git clone URL_DEL_REPOSITORIO
 cd almacen-inventario-mongodb
 
-
-Donde dice `URL_DEL_REPOSITORIO`, luego puedes poner el enlace real de tu GitHub.
-
----
-
 ## 2. Agrega una nota de requisitos
 
 Puedes poner esto antes de instalación:
