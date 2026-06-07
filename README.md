@@ -85,10 +85,6 @@ Debajo de la tabla de endpoints agrega esto:
 }
 
 
-Eso ayuda mucho porque el endpoint `POST /transferencias` necesita un body.
-
----
-
 ## 3. Agrega una línea para clonar el repositorio
 
 Antes de “Comandos para ejecutar”, puedes agregar:
